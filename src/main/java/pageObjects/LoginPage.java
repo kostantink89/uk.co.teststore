@@ -1,6 +1,7 @@
 package pageObjects;
 
 import base.ParentPage;
+import data.TestData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,12 +29,19 @@ public class LoginPage extends ParentPage {
         enterTextInToElement(passwordField, password);
     }
 
+    public void fillingLoginPageWithValidCred() {
+        enterEmailToTheEmailField(TestData.EMAIL);
+        enterPasswordToThePasswordField(TestData.PASSWORD);
+        clickOnSignInButton();
+    }
+
+
     public void clickOnSignInButton() {
         clickOnElement(signInButton);
 
     }
 
     public boolean isSignInButtonDisplayed() {
-       return isElementPresented(signInButton);
+        return isElementPresented(signInButton);
     }
 }

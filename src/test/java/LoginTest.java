@@ -4,20 +4,17 @@ import data.TestData;
 
 public class LoginTest extends BaseTest {
 
-    @Test
-    public void positiveLoginTest() {
+    @Test()
+    public void positiveLoginTest() throws InterruptedException {
 
         homePage.openHomePage();
         homePage.checkIsRedirectToHomePage();
         homePage.clickOnSignInButton();
 
-        loginPage.enterEmailToTheEmailField(TestData.VALID_EMAIL);
-        loginPage.enterPasswordToThePasswordField(TestData.PASSWORD);
-        loginPage.clickOnSignInButton();
+        loginPage.fillingLoginPageWithValidCred();
 
         Assert.assertTrue("Sign out button is not displayed", myStorePage.isSignOutButtonDisplayed());
         Assert.assertTrue("Account name is not displayed", myStorePage.isAccountNameDisplayed());
-
 
     }
 
@@ -28,8 +25,8 @@ public class LoginTest extends BaseTest {
         homePage.checkIsRedirectToHomePage();
         homePage.clickOnSignInButton();
 
-        loginPage.enterPasswordToThePasswordField(TestData.INVALID_EMAIL);
-        loginPage.enterPasswordToThePasswordField(TestData.PASSWORD);
+        loginPage.enterEmailToTheEmailField(TestData.EMAIL);
+        loginPage.enterPasswordToThePasswordField(TestData.INVALID_PASSWORD);
         loginPage.clickOnSignInButton();
 
         Assert.assertTrue("Sign In Button is not displayed", loginPage.isSignInButtonDisplayed());
@@ -38,3 +35,5 @@ public class LoginTest extends BaseTest {
 
     }
 }
+
+

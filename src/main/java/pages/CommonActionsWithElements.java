@@ -1,5 +1,6 @@
 package pages;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +19,7 @@ public class CommonActionsWithElements {
     public Logger logger = Logger.getLogger(getClass());
 
     WebDriverWait webDriverWait10, webDriverWait15;
+
 
     public CommonActionsWithElements(WebDriver webDriver) {
         this.webDriver = webDriver;
