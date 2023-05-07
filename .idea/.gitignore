@@ -17,4 +17,5 @@ target/site
 *.iml
 *.ipr
 *.iws
-src/main/java/data/TestData.java
+
+*TestData.java
