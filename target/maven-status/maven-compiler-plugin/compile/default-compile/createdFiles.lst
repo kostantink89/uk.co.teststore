@@ -1,0 +1,6 @@
+pages\CommonActionsWithElements.class
+base\ParentPage.class
+data\TestData.class
+pageObjects\LoginPage.class
+pageObjects\MyStorePage.class
+pageObjects\HomePage.class

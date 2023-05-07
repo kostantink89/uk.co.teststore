@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: LoginTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.439 s <<< FAILURE! - in LoginTest
+negativeLoginTest on negativeLoginTest(LoginTest)(LoginTest)  Time elapsed: 1.418 s  <<< FAILURE!
+org.openqa.selenium.remote.http.ConnectionFailedException: 
+Unable to establish websocket connection to http://localhost:58973/devtools/browser/15fdfbdd-dfd2-4f2b-a2f8-fec68225943b
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'THECAT', ip: '192.168.50.194', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: ChromeDriver
+
+positiveLoginTest on positiveLoginTest(LoginTest)(LoginTest)  Time elapsed: 0.689 s  <<< FAILURE!
+org.openqa.selenium.remote.http.ConnectionFailedException: 
+Unable to establish websocket connection to http://localhost:58986/devtools/browser/a85da698-677d-4a78-b590-5e6f1fb91ea4
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'THECAT', ip: '192.168.50.194', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: ChromeDriver
+

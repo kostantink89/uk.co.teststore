@@ -15,7 +15,7 @@ import java.time.Duration;
 public class CommonActionsWithElements {
 
     protected WebDriver webDriver;
-    Logger logger = Logger.getLogger(getClass());
+    public Logger logger = Logger.getLogger(getClass());
 
     WebDriverWait webDriverWait10, webDriverWait15;
 
