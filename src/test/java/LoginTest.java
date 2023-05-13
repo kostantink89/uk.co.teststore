@@ -1,10 +1,11 @@
 import org.junit.Assert;
 import org.junit.Test;
 import data.TestData;
+import utils.ExcelUtils;
 
 public class LoginTest extends BaseTest {
 
-    @Test()
+
     public void positiveLoginTest() throws InterruptedException {
 
         homePage.openHomePage();
@@ -18,7 +19,26 @@ public class LoginTest extends BaseTest {
 
     }
 
+
     @Test
+    public void positiveLoginTestWithExcel() {
+
+        homePage.openHomePage();
+        homePage.checkIsRedirectToHomePage();
+        homePage.clickOnSignInButton();
+
+        loginPage.enterEmailToTheEmailField(ExcelUtils.setEmail());
+        loginPage.enterPasswordToThePasswordField(ExcelUtils.setPassword());
+        loginPage.clickOnSignInButton();
+
+        Assert.assertTrue("Sign out button is not displayed", myStorePage.isSignOutButtonDisplayed());
+        Assert.assertTrue("Account name is not displayed", myStorePage.isAccountNameDisplayed());
+
+
+
+    }
+
+
     public void negativeLoginTest() {
 
         homePage.openHomePage();
