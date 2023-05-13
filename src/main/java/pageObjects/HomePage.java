@@ -19,7 +19,7 @@ public class HomePage extends ParentPage {
         try {
             webDriver.get(base_URL);
         } catch (Exception e) {
-            logger.error("Cannot open Home Page");
+
             Assert.fail("Cannot open Home Page");
         }
     }
